@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.css">
+        <title>A Contacc List</title>
+    </head>
+    <body>
+        <audio autoplay>
+            <source src = bigIron.mp3 type = audio/mpeg>
+        </audio>
+        <div class="container">
+            <h1 class="center-align">My Peoples</h1>
+            <input type="text" id="filterInput" placeholder="Do a thing">
+            <ul id="names" class="collection with-header">
+                <li class="collection-header">
+                    <h5>A</h5>
+                </li>
+                <li class="collection-item">
+                    <a href="#">Aardvark</a>
+                </li>
+                <li class="collection-item">
+                    <a href="#">Anger</a>
+                </li>
+                <li class="collection-item">
+                    <a href="#">Axe</a>
+                </li>
+                <li class="collection-header">
+                    <h5>B</h5>
+                </li>
+                <li class="collection-item">
+                    <a href="#">Bazinga</a>
+                </li>
+                <li class="collection-item">
+                    <a href="#">Bib</a>
+                </li>
+                <li class="collection-item">
+                    <a href="#">Broth</a>
+                </li>
+                <li class="collection-item">
+                    <a href="https://www.bubsy.com/">Bubsy 3d</a>
+                </li>
+                <li class="collection-header">
+                    <h5>C</h5>
+                </li>
+                <li class="collection-item">
+                    <a href="#">Cap</a>
+                </li>
+                <li class="collection-item">
+                    <a href="#">Cripple</a>
+                </li>
+                <li class="collection-item">
+                    <a href="#">Crock Pot</a>
+                </li>
+                <li class="collection-header">
+                    <h5>D</h5>
+                </li>
+                <li class="collection-item">
+                    <a href="DannyDeVito.png">Danny Devito</a>
+                </li>
+                <li class="collection-item">
+                    <a href="#">Dedede, King</a>
+                </li>
+                <li class="collection-item">
+                    <a href="#">Dinny Devito</a>
+                </li>
+                <li class="collection-header">
+                    <h5>E</h5>
+                </li>
+                <li class="collection-item">
+                    <a href="#">Enderman</a>
+                </li>
+                <li class="collection-item">
+                    <a href="https://www.peta.org/">Erwin, Steve</a>
+                </li>
+                <li class="collection-item">
+                    <a href="#">ET for the Atari</a>
+                </li>
+                <li class="collection-header">
+                    <h5>F</h5>
+                </li>
+                <li class="collection-item">
+                    <a href="https://www.soundboardcity.com/fart-machine/">Fart</a>
+                </li>
+                <li class="collection-item">
+                    <a href="#">Fortnite</a>
+                </li>
+                <li class="collection-item">
+                    <a href="#">Fracking</a>
+                </li>
+                <li class="collection-item">
+                    <h5>G</h5>
+                </li>
+                <li class="collection-item">
+                    <a href="#">Gal</a>
+                </li>
+                <li class="collection-item">
+                    <a href="#">Gel</a>
+                </li>
+                <li class="collection-item">
+                    <a href="#">Gil</a>
+                </li>
+                <li class="collection-item">
+                    <a href="#">Gol</a>
+                </li>
+                <li class="collection-item">
+                    <a href="#">Gul</a>
+                </li>
+                <li class="collection-item">
+                    <a href="#">Gyl</a>
+                </li>
+            </ul>
+        </div>
+        <script>
+            let filterInput = document.getElementById('filterInput');
+            filterInput.addEventListener('keyup', filterNames);
+            function filterNames(){
+                let filterValue = document.getElementById('filterInput').value.toUpperCase();
+                let ul = document.getElementById('names');
+                let li = ul.querySelectorAll('li.collection-item');
+                for(let i = 0;i < li.length;i++){
+                    let a = li[i].getElementsByTagName('a')[0];
+                    if(a.innerHTML.toUpperCase().indexOf(filterValue) > -1){
+                        li[i].style.display = '';
+                    } 
+                    else {
+                        li[i].style.display = 'none';
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>
