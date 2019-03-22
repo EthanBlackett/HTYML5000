@@ -5,12 +5,19 @@
             <title>Exercies</title>
             <style type="text/css">
                 body{
-                    background-image: url(BigRon.jpg);
+                    background-image: url(WAZOWSKI.png);
                     background-position:top right;
-                    color: blue;
+                    color: darkred;
                     font-family: techno;
-                    text-shadow: 0px 3px 5px #008024;
+                    text-shadow: 0px 3px 5px ;
                     text-align: center;
+                    transition: 5s;
+                }
+                body:hover{
+                    background-image: url(BigRon.jpg);
+                    font-family: wingdings;
+                    text-shadow: 25px 25px 100px;
+                    text-align: right;
                 }
                 h1{
                     font-size: 100px;
@@ -38,41 +45,48 @@
                     margin: auto;
                     margin-top: 20px;
                 }
+                video#givemethechild{
+                    display:block;
+                    border-radius: 100%;
+                    border: dotted 100px hotpink;
+                    transition: 2s;
+                }
+                video#givemethechild:hover{
+                    border: yellow;
+                    border-radius: 0%;
+                }
+                img#John{
+                    display:block;
+                    border-radius:100%;
+                    border:solid 4px black;
+                    position:absolute;
+                    left:500px;
+                    top:500px;
+                    z-index:1;
+                }
+                img#Billy{
+                    display:block;
+                    border-radius:0%;
+                    height:100px;
+                    transition: 10s;
+                }
+                img#Billy:hover{
+                    height: 1000px;
+                }
         </style>
         </head>
         <body>
-            <audio controls>
-                   <source src = bigIron.mp3 type = audio/mpeg>
-            </audio>
-            <audio controls>
-                   <source src = bigIron.mp3 type = audio/mpeg>
-            </audio>
-            <audio controls>
-                   <source src = bigIron.mp3 type = audio/mpeg>
-            </audio>
-            <audio controls>
-                   <source src = bigIron.mp3 type = audio/mpeg>
-            </audio>
-            <audio controls>
-                   <source src = bigIron.mp3 type = audio/mpeg>
-            </audio>
-            <audio controls>
-                   <source src = bigIron.mp3 type = audio/mpeg>
-            </audio>
-            <audio controls>
-                   <source src = bigIron.mp3 type = audio/mpeg>
-            </audio>
-            <audio controls>
+            <audio autoplay loop>
                    <source src = bigIron.mp3 type = audio/mpeg>
             </audio>
             <h1>Big Iron</h1>
-            <h2>I am Marty Robbins</h2>
-            <h2>I will be your guide</h2>
             <div id="square"></div>
             <div id="circle"></div>
-            <img src="DannyDeVito.png" />
-            <video width="320" height="240" controls>
+            <div id="BigIron"></div>
+            <video width="640" height="360" id="givemethechild" autoplay loop>
                 <source src = ATHOUSANDCHILDREN.mp4 type = video/mp4>
             </video>
+            <img src="BigRon.jpg" id="John">
+            <img src="Waluigi.png" id="Billy"
         </body>
 </html>
