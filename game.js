@@ -2445,4 +2445,10 @@ function theWalk2(){
 function shopping(){
     check();
 }//This is you shoppping ~
+<<<<<<< HEAD
 }//This bracket is the game. Don't delete ~
+=======
+}//This bracket is the game. Don't delete ~
+
+
+>>>>>>> README.md
