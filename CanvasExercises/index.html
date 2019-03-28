@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CanvasStuff</title>
+        <audio autoplay loop>
+            <source src = "bigIron.mp3" type = "audio/mpeg">
+        </audio>
+        <style type = "text/css">
+            body {
+                background-color: brown;
+            }
+        </style>
+    </head>
+    <body>
+        <canvas id = "myCanvas" width = "200" height = "200" style = "border: 5px inset white;" >
+            Your browser does not support the canvas element.
+        </canvas>  
+        <script>
+            var canvas = document.getElementById("myCanvas");
+            var ctx canvas.getContext("2d");
+            ctx.fillStyle = "#FF0000";
+            ctx.fillRect(0,10,150,75);
+            ctx.moveTo(0,0);
+            ctx.lineTo(200,200);
+            ctx.stroke();
+            ctx.beginPath();
+            ctx.arc(95,50,50,0,1*Math.PI);
+            ctx.stroke();
+        </script>
+    </body>
+</html>
