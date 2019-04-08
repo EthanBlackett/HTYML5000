@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>c͈͇̹̱̻ͩl̞̯̤̓o͉ͩ́k̲̫͂̈͛ͬ̑̿</title>
+    <style type = "text/css">
+        body{
+            background: grey;
+        }
+    </style>
+    <audio autoplay loop>
+        <source src = "bigIron.mp3" type = "audio/mpeg"> 
+    </audio>
+</head>
+<body>
+    <canvas id = "canvas" width = "400" height = "400" style = "background-color:hotpink"></canvas>
+    <script>
+        var canvas = document.getElementById("canvas");
+        var ctx = canvas.getContext("2d");
+        var radius = canvas.height / 2;
+        ctx.translate(radius, radius);
+        radius = radius * 0.90
+        drawClock();
+        
+        function drawClock() {
+            drawFace(ctx, radius);
+            drawNumbers(ctx, radius);
+            drawTime(ctx, radius);
+        }
+        function drawFace(ctx, radius) {
+            var grad;
+            
+            ctx.beginPath();
+            ctx.arc(0, 0, radius, 0, 2 * Math.PI);
+            ctx.fillStyle = "#F0FF0D";
+            ctx.fill();
+            
+            grad = ctx.createRadialGradient(0, 0, radius * 0.95, 0, 0, radius * 1.05);
+            grad.addColorStop(0, "#3DFF48");
+            grad.addColorStop(0.5, "green");
+            grad.addColorStop(1, "#333");
+            ctx.strokeStyle = grad;
+            ctx.lineWidth = radius * .1;
+            ctx.stroke();
+            
+            ctx.beginPath();
+            ctx.arc(0, 0, radius * 0.1, 0, 2 * Math.PI);
+            ctx.fillStyle = "#9F1CFF";
+            ctx.fill();
+            }
+        function drawNumbers(ctx, radius) {
+            var ang;
+            var num;
+            ctx.font = radius * 0.15 + "px arial";
+            ctx.textBaseline = "middle";
+            ctx.textAlign = "center";
+            for(num = 1; num < 30; num++) {
+                ang = num * Math.PI / 14.5;
+                ctx.rotate(ang);
+                ctx.translate(0, -radius * 0.85);
+                ctx.rotate(-ang);
+                ctx.fillText(num.toString(), 0, 0);
+                ctx.rotate(ang);
+                ctx.translate(0, radius * 0.85);
+                ctx.rotate(-ang);
+            }
+        }
+        function drawTime(ctx, radius) {
+            var now = new Date();
+            var hour = now.getHours();
+            var minute = now.getMinutes();
+            var second = now.getSeconds();
+        }
+    </script>
+</body>
+</html>
