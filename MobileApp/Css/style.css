@@ -1,0 +1,17 @@
+/* Styleheet for Mobilbe App*/
+
+/* Reset*/
+html,bodykdiv,h1,h2,h3,h4,h5,h6,p,ul,ol,li,header,footer,nav {
+    margin: 0;
+    padding: 0;
+}
+
+/* Universal Style*/
+body {
+    background-color: #a80000;
+}
+div#container {
+    width: 1920px;
+    height: 1080px;
+    background-color: #5C0000;
+}
