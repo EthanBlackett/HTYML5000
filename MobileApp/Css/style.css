@@ -8,12 +8,20 @@ html,body,div,h1,h2,h3,h4,h5,h6,p,ul,ol,li,header,footer,nav {
 
 /* Universal Style*/
 body {
-    background-color: #a80000;
+    background-color: #008000;
 }
-div#container {
-    width: 1920px;
-    height: 1080px;
-    background-color: #B5B312;
+div#container h3#item {
+    display: block;
+    text-align: center;
+    font-family: 'monaco';
+    color: #00FF00;
+    background-color: #008000;
+    transition: .5s;
+}
+h3#item:hover{
+    text-shadow:3px 3px 2px;
+    color: #4DFF4D;
+    box-shadow: 2px 2px 2px;
 }
 header {
     width:100%;
@@ -21,8 +29,8 @@ header {
     background-color: #0C4D75;
 }
 header,h1 {
-    color: black;
     font-family: 'monaco';
+    color: #00FF00;
     font-size: 2.6em;
 }
 div#content {
@@ -36,5 +44,4 @@ nav {
 nav ul {
     display: block;
     margin: auto;
-    font-family: 'monaco';
 }

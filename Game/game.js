@@ -61,6 +61,7 @@ var erasers=0
 var rootNum=0
 var day=1
 var cash=0
+var shoppingCost=0
 }//Numbers ~
 {
 var a1Key=false //This one's in the toilet
@@ -2444,11 +2445,23 @@ function theWalk2(){
 }
 function shopping(){
     check();
+    var q70 = prompt("What do you want to buy? \n -Type something.").toLocaleLowerCase();
+    alert("" +q70+ " huh? I think that's on aisle " +randNum(max,min)+ ".")
+    alert("So it was. Now you have " +q70+ " in your cart.")
+    shoppingCost += randNum(max,min);
+    var q71 = prompt("Are you done shoppin? \n -Yes \n -No").toLowerCase();
+        if(q71 == "yes" || q71 == "y"){
+            shopping();
+        }
+        else if(q71 == "no" || q71 == "n"){
+            checkOut();
+        }
+        else {
+            alert("" +q71+ " wasn't an option.")
+            q71();
+        }
 }//This is you shoppping ~
-<<<<<<< HEAD
+function checkOut(){
+    
+}//This is the checkout for shopping ~
 }//This bracket is the game. Don't delete ~
-=======
-}//This bracket is the game. Don't delete ~
-
-
->>>>>>> README.md
