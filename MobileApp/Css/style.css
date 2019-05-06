@@ -37,6 +37,11 @@ div#container {
     font-size: 2.6em;
     background-color: #000000;
 }
+ul{
+    display: block;
+    align-content: center;
+    background-color: #008000;
+}
 li#item {
     position: -webkit-sticky;
     position: sticky;
