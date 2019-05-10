@@ -2,6 +2,7 @@
 
 /* Reset*/
 html,body,div,h1,h2,h3,h4,h5,h6,p,ul,ol,li,header,footer,nav {
+    text-decoration: none;
     margin: 0;
     padding: 0;
     transition: .5s;
@@ -13,18 +14,18 @@ body {
     background-color: #268026;
 }
 h1 {
+    text-decoration: none;
     font-family: 'monaco';
     text-align: center;
     width:100%;
     padding:100px 100px;
     background-color: #000000;
     transition: .5s;
-}
-h1 {
     display: block;
     text-align: center;
 }
 li {
+    text-decoration: none;
     text-align: center;
     display: block;
     float: left;
@@ -32,17 +33,21 @@ li {
     transition: 2s;
 }
 div#container {
+    text-decoration: none;
     font-family: 'monaco';
     color: #00FF00;
     font-size: 2.6em;
     background-color: #000000;
 }
 ul{
+    list-style: none;
+    text-decoration: none;
     display: block;
     align-content: center;
     background-color: #008000;
 }
 li#item {
+    text-decoration: none;
     position: -webkit-sticky;
     position: sticky;
     top: 0;
@@ -57,6 +62,7 @@ li#item {
     transition: .5s;
 }
 li#item:hover {
+    text-decoration: none;
     font-size: 50px;
     text-shadow:3px 3px 2px #000000;
     color: #4DFF4D;
@@ -65,6 +71,7 @@ li#item:hover {
     transition: .25s;
 }
 li#item:active {
+    text-decoration: none;
     font-size: 45px;
     text-shadow:1px 1px 5px #4DFF4D;
     background-color:#008000;
@@ -72,6 +79,23 @@ li#item:active {
     transition: .25s;
 }
 nav,ul {
+    text-decoration: none;
     display: block;
     margin: auto;
+}
+img#product {
+    width: 300px;
+    height: 300px;
+    padding: 10px;
+    border-style: inset;
+    border-color: white;
+    transition: .5s
+}
+img#product:hover {
+    width: 350px;
+    height: 350px;
+}
+img#product:active {
+    width: 325px;
+    height: 325px;
 }
