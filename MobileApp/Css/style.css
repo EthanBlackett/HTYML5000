@@ -99,3 +99,26 @@ img#product:active {
     width: 325px;
     height: 325px;
 }
+@media screen and (max-width: 1200px) {
+    figure.product {
+        float: none;
+        margin: 10px auto;
+        min-width: 50%;
+        max-width: 100%;
+        background-color: #000000;
+        border-radius: 5%;
+    }
+    figure.product figcaption {
+        text-align: center;
+        color: white;
+        font-family: 'monaco';
+        font-size: 12px;
+    }
+    legend, span, input, textarea {
+        display: block;
+        margin: auto;
+        text-align: center;
+        font-family: 'monaco';
+        color: white;
+    }
+}
